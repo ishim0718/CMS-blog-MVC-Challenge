@@ -27,11 +27,11 @@ Comments.init(
       },
     },
     blogpost_id: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'blogpost',
-            key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'blogpost',
+          key: 'id'
+      }
     },
   },
   {

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
   <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -15,12 +16,13 @@
     </h1>
   </header>
   <nav>
-      {{#if logged_in}}
-        <a href="/dashboard">Dashboard</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+    <a href="/">Home</a>
+    {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a>
+      <button class="no-button" id="logout">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
   </nav>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -28,6 +30,10 @@
   <footer>
       
   </footer>
+ {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
 </body>
 
 </html>

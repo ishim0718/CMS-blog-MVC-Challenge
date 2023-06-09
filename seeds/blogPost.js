@@ -1,6 +1,6 @@
 const { Blogpost } = require('../models');
 
-const blogPostData = [
+const blogpostData = [
   {
     title: 'Post #1',
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -18,6 +18,6 @@ const blogPostData = [
   },
 ];
 
-const seedBlogPost = () => Blogpost.bulkCreate(blogPostData);
+const seedBlogpost = async() => await Blogpost.bulkCreate(blogpostData);
 
-module.exports = seedBlogPost;
+module.exports = seedBlogpost;
